@@ -1,0 +1,39 @@
+#mineboard {
+    line-height: 0;
+}
+#mineboard p {
+    display: inline-block;
+    margin: 0;
+    background: #ccc;
+    border-style: outset;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
+    -webkit-box-sizing: padding-box;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+#mineboard p[flag="1"]::before {
+    content: "\2691";
+    font-size: 1.2em;
+}
+#mineboard p:active::before,
+#mineboard p[checked]::before {
+    content: "";
+}
+#mineboard p:active,
+#mineboard p[checked="true"] {
+    padding: 2px;
+    border: 1px solid #aaa!important;
+}
+#mineboard p[bomb="1"][checked]::before {
+    font-size: 1.2em;
+    content: "\2739";
+}
+#mineboard p[explode] {
+    background-color: #ff6760;
+}
