@@ -1,16 +1,9 @@
 (ns minesweep.core)
 
-
-
 ;; DEVELOPEMENT SETTINGS
 (enable-console-print!)
 (defn log [x]
   (.log js/console x))
-
-
-
-;; CORE LIBRARIES
-
 
 
 ;; VARIABLE DECLARATION
@@ -24,10 +17,10 @@
 
 ;; GAME SETTINGS
 (def tilesize 20)
-(def gridsize 10)
+(def gridsize 20)
 (def border 3)
 
-(def maxmines 10)
+(def maxmines 45)
 (def bombs (atom ()))
 
 
@@ -221,7 +214,7 @@
 
 
 (defn minesweep
-  []
+    []
   (generatebomb)
   (docsettings)
   (drawgrid))

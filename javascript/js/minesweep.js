@@ -2,7 +2,7 @@ var gridSize = 20,
     grid = gridSize*gridSize,
     tileSize = 20,
     border = 3,
-    maxMines = 20,
+    maxMines = 45,
     bombs = [],
 
     board = document.getElementById("mineboard"),
@@ -50,6 +50,7 @@ function shuffleArray(arr) {
 
 // DOC SETTINGS
 function boardSettings() {
+    board.innerHTML = null;
     setStyles(board, {"width": gridSize * (tileSize + (2 * border)) + "px",
                       "height": gridSize * (tileSize + (2 * border)) + "px"});
 }
