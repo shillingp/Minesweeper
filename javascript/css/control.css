@@ -1,0 +1,13 @@
+#mineboard, #controls {
+    display: inline-table;
+}
+
+.control {
+    margin: 0 20px 20px;
+    font: 14px "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.control label {
+    display: inline-block;
+    width: 16px;
+}

@@ -2,9 +2,26 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/sweep.css">
+        <link rel="stylesheet" href="css/control.css">
     </head>
     <body>
         <div id="mineboard"></div>
+        <div id="controls">
+            <div class="control">
+                Grid Size:<br>
+                <label for="grid-size"></label>
+                <input id="grid-size" type="range">
+            </div>
+            <div class="control">
+                Max Mines:<br>
+                <label for="mine-number"></label>
+                <input id="mine-number" type="range">
+            </div>
+            <div class="control">
+                <input id="game-button" type="button" value="Start New Game">
+            </div>
+        </div>
         <script type="text/javascript" src="js/minesweep.js"></script>
+        <script type="text/javascript" src="js/controls.js"></script>
     </body>
 </html>

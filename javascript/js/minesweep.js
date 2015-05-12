@@ -1,5 +1,5 @@
 var gridSize = 20,
-    grid = gridSize*gridSize,
+    grid = (function(a){return (a*a);})(gridSize),
     tileSize = 20,
     border = 3,
     maxMines = 45,
@@ -51,6 +51,7 @@ function shuffleArray(arr) {
 // DOC SETTINGS
 function boardSettings() {
     board.innerHTML = null;
+    bombs = [];
     setStyles(board, {"width": gridSize * (tileSize + (2 * border)) + "px",
                       "height": gridSize * (tileSize + (2 * border)) + "px"});
 }
@@ -128,7 +129,7 @@ function markFlag(elem) {
 
 function markChecked(elem, value) {
     setAttrs(elem, {"checked": "true"});
-    if (value != 0) {
+    if (value !== 0) {
         elem.textContent = value;
     }
 }
@@ -184,7 +185,7 @@ function checkRound(elem) {
             removeItems(spaces, ["ll", "lm", "lr"]);
         }
         tertiaryCheck(elem, numb, spaces);
-    };
+    }
 }
 
 function primaryCheck(elem) {
